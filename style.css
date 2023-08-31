@@ -1,0 +1,26 @@
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#pagamento {
+
+    padding: 3px;
+    text-align: left;
+
+}
+
+.label {
+    margin-left: 50px;
+    padding: 5px;
+    text-align: left;
+
+}
+
+.input {
+
+    padding: 5px;
+    text-align: left;
+
+}
