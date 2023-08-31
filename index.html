@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>PAGAMENTO</h1>
+
+    <form action="javascript: enviar();">
+        <div class="label">
+            <label for="name">NOME</label><br>
+            <input type="text" size="60" class="js-input-name" name="name">
+        </div>
+
+        <div class="label">
+            <label for="endereco">ENDEREÇO</label><br>
+            <input type="text" size="60" class="js-input-endereco" name="endereco">
+        </div>
+
+        <div class="label">
+            <label for="email">EMAIL</label><br>
+            <input type="email" size="50" class="js-input-email" name="email">
+        </div>
+
+        <div class="label">
+            <label for="cpf">CPF</label><br>
+            <input type="number" class="js-input-cpf" name="cpf">
+        </div>
+
+
+
+        <div class="label">
+            <label for="pagamento">FORMA DE PAGAMENTO</label><br>
+            <select name="pagamento" class="js-select-pagamento" id="pagamento">
+                <option value="" selected>Selecione...</option>
+                <option value="cartao">Cartão</option>
+                <option value="boleto">Boleto</option>
+                <option value="pix">PIX</option>
+            </select>
+
+        </div>
+
+        <div class="label" style="float: left;">
+            <button type="submit" onsubmit="enviar()" value="Enviar">ENVIAR</button>
+        </div>
+
+        <div class="label">
+            <button type="reset" value="Enviar">RESET</button>
+        </div>
+    </form>
+</body>
+
+</html>
