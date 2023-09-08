@@ -1,33 +1,31 @@
+
 function enviar() {
+  // const formulario = document.querySelector('#formulario');
   //Variaveis que recebem valor dos inputs e depois são atribuidas ao JSON
-  var nomeValue = document.querySelector(".js-input-name").value;
-  var enderecoValue = document.querySelector(".js-input-endereco").value;
-  var emailValue = document.querySelector(".js-input-email").value;
-  var cpfValue = document.querySelector(".js-input-cpf").value;
-  var pagamentoValue = document.querySelector(".js-select-pagamento").value;
+  var nomeValue = document.querySelector("#js-input-nome").value;
+  var sobrenomeValue = document.querySelector("#js-input-sobrenome").value;
+  var usuarioValue = document.querySelector("#js-input-usuario").value;
+  var enderecoValue = document.querySelector("#js-input-endereco").value;
+  var cidadeValue = document.querySelector("#js-select-cidade").value;
+  var emailValue = document.querySelector("#js-input-email").value;
+  var cpfValue = document.querySelector("#js-input-cpf").value;
+  var pagamentoValue = document.querySelector("#js-select-forma-pagamento").value;
 
   var formValue = {
     dados_pessoais: {
-      name: nomeValue,
+      nome: nomeValue,
+      sobrenome: sobrenomeValue,
+      usuario: usuarioValue,
       endereco: enderecoValue,
+      cidade: cidadeValue,
       email: emailValue,
     },
-
     dados_bancarios: {
       cpf: cpfValue,
-      pagamento: pagamentoValue,
-    },
+      pagamento: pagamentoValue
+    }
   };
-  //VALIDAÇÃO DO CAMPO NOME
-  if (nomeValue != "") {
-    alert(
-      "Obrigado sr(a) " +
-        nomeValue +
-        " os seus dados foram encaminhados com sucesso"
-    );
-  } else {
-    alert("O campo Nome é de preenchimento obrigatório!");
-    return enviar;
-  }
   console.log(formValue);
+  // document.querySelector(formulario).reset()
+  formulario.reset();
 }
